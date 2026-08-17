@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #eff1ef;
+  --paper-2: #e5e7e2;
+  --ink: #15161a;
+  --ink-2: #1e2027;
+  --ink-3: #2a2c34;
+  --line: #cfd2c9;
+  --line-on-ink: #34363f;
+  --accent: #ff5a29;
+  --accent-ink: #b23d16;
+  --accent-soft: #ffe4d8;
+  --blue: #2f6fed;
+  --blue-soft: #dde7fd;
+  --muted: #55584f;
+  --muted-on-ink: #a7a9b2;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-line-on-ink: var(--line-on-ink);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-muted: var(--muted);
+  --color-muted-on-ink: var(--muted-on-ink);
+  --font-display: var(--font-bricolage);
+  --font-body: var(--font-jakarta);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
