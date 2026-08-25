@@ -14,7 +14,7 @@ export function Footer() {
             <Logo />
           </Link>
           <p className="max-w-[26ch] text-sm text-muted-on-ink">
-            Marketing and technology for small and medium businesses across India. Based in Bengaluru &amp; Mangaluru.
+            Marketing and technology for small and medium businesses across India. Built and operated in Bangalore.
           </p>
           <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted-on-ink">
             {siteConfig.legalNote}

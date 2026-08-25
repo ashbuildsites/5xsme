@@ -22,7 +22,7 @@ export default function LocationsIndexPage() {
             All Of Bengaluru. All Of India.
           </h1>
           <p className="mt-6 text-[16.5px] leading-relaxed text-muted">
-            We&apos;re based in Bengaluru and Mangaluru, and work with businesses
+            We&apos;re built and operated in Bengaluru, and work with businesses
             right across the city — not just a handful of trendy neighbourhoods.
             Most of what we do is remote-friendly too, so we take on clients
             anywhere in India.

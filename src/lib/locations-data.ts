@@ -1,7 +1,7 @@
 export type LocationArea = {
   slug: string;
   name: string;
-  city: "Bengaluru" | "Mangaluru";
+  city: "Bengaluru";
   character: string;
   goodFor: string[];
   volumeNote?: string;

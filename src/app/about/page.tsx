@@ -7,7 +7,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "About 5xSME",
   description:
-    "5xSME bridges the gap between digital technology and India's MSME sector — a Bengaluru & Mangaluru based team helping small and medium businesses across the country get online affordably.",
+    "5xSME bridges the gap between digital technology and India's MSME sector — a Bengaluru based team helping small and medium businesses across the country get online affordably.",
   alternates: { canonical: "/about" },
 };
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
             are locked out of good marketing and technology — either priced out
             of it, or sold a version that doesn&apos;t fit how they actually operate.
             We built a team that does both, at rates that make sense for an SME —
-            started in Bengaluru and Mangaluru, now working with businesses
+            built and operated in Bangalore, now working with businesses
             across the country.
           </p>
         </Container>

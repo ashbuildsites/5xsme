@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | 5xSME",
   },
   description:
-    "5xSME is a Bengaluru & Mangaluru based marketing and technology agency serving small and medium businesses across India — ads, social media, videography, SEO, and app development under one team.",
+    "5xSME is a Bengaluru based marketing and technology agency serving small and medium businesses across India — ads, social media, videography, SEO, and app development under one team.",
   openGraph: {
     type: "website",
     locale: "en_IN",

@@ -6,7 +6,7 @@ export const siteConfig = {
   phoneE164: "+916362268675",
   whatsappUrl: "https://wa.me/916362268675",
   email: "contact@5xsme.in",
-  cities: ["Bengaluru", "Mangaluru"],
+  cities: ["Bengaluru"],
   region: "Karnataka",
   quoteHref: "/contact",
 };
@@ -28,7 +28,7 @@ export const founders = [
 
 export const companyFacts = [
   { n: "25+", l: "Years combined team experience" },
-  { n: "2", l: "Cities — Bengaluru & Mangaluru" },
-  { n: "6", l: "Services under one roof" },
+  { n: "9", l: "Services under one roof" },
+  { n: "Pan-India", l: "Remote-friendly delivery" },
   { n: "GST · MSME", l: "Registered business" },
 ];

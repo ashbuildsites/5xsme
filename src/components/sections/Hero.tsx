@@ -104,7 +104,7 @@ export function Hero() {
 
         <div className="hero-text-enter relative z-10 mx-auto flex max-w-[680px] flex-col items-center py-4 text-center xl:py-6" style={{ animationDelay: "0.15s" }}>
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border-2 border-ink bg-paper px-4 py-1.5 font-mono text-[12px] uppercase tracking-[0.1em]">
-            {siteConfig.legalNote} · Bengaluru &amp; Mangaluru
+            {siteConfig.legalNote}
           </span>
 
           <p className="mb-2.5 font-mono text-[12px] uppercase tracking-[0.16em] text-muted">
@@ -118,7 +118,7 @@ export function Hero() {
 
           <p className="mt-4 max-w-[52ch] text-balance text-[16px] leading-relaxed text-muted">
             Ads, social, WhatsApp, video, SEO, and the technology to back it
-            up — run by one Karnataka-based team instead of ten freelancers
+            up, run by one Bangalore-based team instead of ten freelancers
             who&apos;ve never spoken to each other.
           </p>
 
@@ -128,10 +128,6 @@ export function Hero() {
               How It Works
             </Button>
           </div>
-
-          <p className="mt-4 font-mono text-[12px] uppercase tracking-[0.08em] text-muted">
-            GST &amp; MSME registered · No lock-in contracts
-          </p>
         </div>
 
         {/* Mobile / tablet card strip */}

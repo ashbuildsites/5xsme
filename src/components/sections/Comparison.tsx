@@ -17,7 +17,7 @@ const rows = [
   },
   {
     label: "Local Karnataka context",
-    fiveX: "Built in, Bengaluru & Mangaluru based",
+    fiveX: "Built and operated in Bangalore",
     freelancers: "Depends who you find",
     agency: "Rarely local",
   },

@@ -107,7 +107,7 @@ export function ServiceTemplate({ service }: { service: Service }) {
                 {i < featuredLocations.length - 2 ? ", " : i === featuredLocations.length - 2 ? ", and " : ""}
               </span>
             ))}
-            , and elsewhere in Bengaluru &amp; Mangaluru.
+            , and elsewhere in Bengaluru.
           </p>
         </Container>
       </section>
