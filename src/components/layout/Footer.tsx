@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/ui/Logo";
 import { services } from "@/lib/services-data";
 import { locations } from "@/lib/locations-data";
 import { siteConfig } from "@/lib/site-config";
@@ -9,12 +10,11 @@ export function Footer() {
     <footer className="bg-ink text-paper">
       <Container className="grid grid-cols-2 gap-10 py-16 sm:grid-cols-4">
         <div className="col-span-2 flex flex-col gap-4 sm:col-span-1">
-          <Link href="/" className="flex items-center gap-1 font-display text-xl font-extrabold">
-            <span>5x</span>
-            <span className="rounded-md bg-paper px-2 py-0.5 text-ink">SME</span>
+          <Link href="/" aria-label="5xSME home">
+            <Logo />
           </Link>
           <p className="max-w-[26ch] text-sm text-muted-on-ink">
-            Marketing and technology for Karnataka&apos;s small and medium businesses. Bengaluru &amp; Mangaluru.
+            Marketing and technology for small and medium businesses across India. Based in Bengaluru &amp; Mangaluru.
           </p>
           <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted-on-ink">
             {siteConfig.legalNote}

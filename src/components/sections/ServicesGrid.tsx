@@ -10,7 +10,7 @@ export function ServicesGrid() {
         <div className="mx-auto max-w-[620px] text-center">
           <Eyebrow>What we run</Eyebrow>
           <h2 className="text-balance font-display text-[32px] font-bold leading-[1.15] sm:text-[42px]">
-            Six Services. One Accountable Team.
+            Nine Services. One Accountable Team.
           </h2>
           <p className="mt-5 text-[16px] leading-relaxed text-muted">
             Everything a growing Karnataka business needs to get found, get chosen,

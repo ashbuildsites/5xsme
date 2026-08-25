@@ -8,7 +8,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Areas We Serve in Bengaluru",
   description:
-    "5xSME works with small and medium businesses across Bengaluru — HSR Layout, Koramangala, Indiranagar, Jayanagar, JP Nagar, Whitefield, Electronic City, and Marathahalli.",
+    "5xSME works with small and medium businesses across all of Bengaluru, plus clients nationwide — remote-friendly marketing and technology for Indian SMEs, wherever you're based.",
   alternates: { canonical: "/locations" },
 };
 
@@ -19,11 +19,13 @@ export default function LocationsIndexPage() {
         <Container className="max-w-[720px] text-center">
           <Eyebrow>Locations</Eyebrow>
           <h1 className="text-balance font-display text-[36px] font-extrabold leading-[1.1] sm:text-[48px]">
-            Bengaluru, Neighbourhood By Neighbourhood.
+            All Of Bengaluru. All Of India.
           </h1>
           <p className="mt-6 text-[16.5px] leading-relaxed text-muted">
             We&apos;re based in Bengaluru and Mangaluru, and work with businesses
-            across the city.
+            right across the city — not just a handful of trendy neighbourhoods.
+            Most of what we do is remote-friendly too, so we take on clients
+            anywhere in India.
           </p>
         </Container>
       </section>

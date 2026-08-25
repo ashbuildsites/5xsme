@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { Logo } from "@/components/ui/Logo";
 
 const links = [
   { href: "/#how-it-works", label: "How It Works" },
@@ -18,9 +19,8 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
       <Container className="flex h-[76px] items-center justify-between">
-        <Link href="/" className="flex items-center gap-1 font-display text-xl font-extrabold">
-          <span>5x</span>
-          <span className="rounded-md bg-ink px-2 py-0.5 text-paper">SME</span>
+        <Link href="/" aria-label="5xSME home">
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -36,7 +36,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="/contact" variant="ink" className="text-[13px] uppercase tracking-[0.06em]">
+          <Button href="/contact" variant="navCta" className="text-[13px] uppercase tracking-[0.06em]">
             Get a Quote
           </Button>
         </div>

@@ -14,12 +14,12 @@ const faqs = [
     a: "No. We work month to month. If it's not working, you're not locked into a year of it.",
   },
   {
-    q: "We only need one or two services, not all six — is that fine?",
+    q: "We only need one or two services, not all nine — is that fine?",
     a: "Yes. Most clients start with one or two channels — usually SEO or ads plus social — and add others once those are working. The plan on your quote call reflects exactly what you need, nothing bundled in that you didn't ask for.",
   },
   {
-    q: "Do you work with businesses outside Bengaluru and Mangaluru?",
-    a: "Our core focus is Karnataka, but we take on businesses elsewhere in India where it's a good fit. Ask on the call.",
+    q: "Do you only work with businesses in Bengaluru and Mangaluru?",
+    a: "No — we're based there, but most of what we do (ads, social, SEO, WhatsApp, websites, apps) is entirely remote-friendly, and we work with SMEs across India. Local shoots and in-person work are easiest to schedule in Karnataka, but they're not a requirement.",
   },
   {
     q: "How fast can we start?",

@@ -22,7 +22,7 @@ export default function ServicesIndexPage() {
             Everything Under One Team.
           </h1>
           <p className="mt-6 text-[16.5px] leading-relaxed text-muted">
-            Pick one, pick all six — every service is built to work with the
+            Pick one, pick all nine — every service is built to work with the
             others, not around them.
           </p>
         </Container>

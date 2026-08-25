@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 type ButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: "accent" | "ink" | "ghost";
+  variant?: "accent" | "ink" | "ghost" | "navCta";
   className?: string;
 };
 
@@ -15,12 +15,14 @@ const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
   accent: "bg-accent text-ink border-2 border-ink",
   ink: "bg-ink text-paper border-2 border-ink",
   ghost: "bg-transparent text-ink border-2 border-ink",
+  navCta: "bg-ink text-paper border-2 border-ink",
 };
 
 const iconWrap: Record<NonNullable<ButtonProps["variant"]>, string> = {
   accent: "bg-ink text-accent",
   ink: "bg-paper text-ink",
   ghost: "bg-ink text-paper",
+  navCta: "bg-accent text-ink",
 };
 
 export function Button({ href, children, variant = "accent", className = "" }: ButtonProps) {
