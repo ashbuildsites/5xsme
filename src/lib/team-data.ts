@@ -62,6 +62,7 @@ export const team: TeamMember[] = [
       "Final-year student — Computer Science & Design, minoring in Data Science",
       "Shipped 3 products and built countless brand websites",
     ],
+    photo: "/images/teams/aswin-a.avif",
   },
   {
     slug: "arjun-g-kanchan",
