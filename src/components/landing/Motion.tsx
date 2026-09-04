@@ -153,7 +153,7 @@ export function Motion() {
             .to(
               preStage,
               {
-                filter: "drop-shadow(0 0 34px rgba(255,58,36,.22))",
+                filter: "drop-shadow(0 0 34px rgba(255,15,45,.22))",
                 duration: 0.5,
                 ease: "power2.out",
               },
@@ -274,7 +274,7 @@ export function Motion() {
           const words = gsap.utils.toArray<HTMLElement>(".pw", philo);
           gsap.to(words, {
             color: (i: number) =>
-              words[i].dataset.accent === "1" ? "#D6200B" : "#121212",
+              words[i].dataset.accent === "1" ? "#D10021" : "#121212",
             stagger: 0.06,
             ease: "none",
             scrollTrigger: {
