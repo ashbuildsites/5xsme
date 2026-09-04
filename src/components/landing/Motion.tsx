@@ -288,30 +288,38 @@ export function Motion() {
 
         /* ------------------------------------------------- stack gallery */
 
-        const stacks = gsap.utils.toArray<HTMLElement>(".lp-stk");
-        if (stacks.length) {
-          gsap.set(stacks, { yPercent: (i: number) => (i === 0 ? 0 : 101) });
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: "#lpStack",
-              start: "top top",
-              end: "+=300%",
-              pin: ".lp-stack-pin",
-              scrub: 1,
-              anticipatePin: 1,
-            },
-          });
-          stacks.forEach((s, i) => {
-            if (i === 0) return;
-            tl.to(s, { yPercent: 0, ease: "none" }, i - 1);
-            if (!compact) {
-              tl.to(
-                stacks[i - 1].querySelector("img"),
-                { yPercent: -12, scale: 1.06, ease: "none" },
-                i - 1,
-              );
-            }
-          });
+        // Desktop-only, like the collaborators pin below: pinning a 100vh
+        // section and animating cards in via yPercent doesn't translate to
+        // touch scroll, and leaving it ungated meant gsap.set() was hiding
+        // cards 2-4 off-screen (yPercent: 101) on mobile with nothing to
+        // ever bring them back — the CSS carousel fallback handles mobile
+        // instead (see .lp-stack-pin in the max-width: 900px query).
+        if (desktop) {
+          const stacks = gsap.utils.toArray<HTMLElement>(".lp-stk");
+          if (stacks.length) {
+            gsap.set(stacks, { yPercent: (i: number) => (i === 0 ? 0 : 101) });
+            const tl = gsap.timeline({
+              scrollTrigger: {
+                trigger: "#lpStack",
+                start: "top top",
+                end: "+=300%",
+                pin: ".lp-stack-pin",
+                scrub: 1,
+                anticipatePin: 1,
+              },
+            });
+            stacks.forEach((s, i) => {
+              if (i === 0) return;
+              tl.to(s, { yPercent: 0, ease: "none" }, i - 1);
+              if (!compact) {
+                tl.to(
+                  stacks[i - 1].querySelector("img"),
+                  { yPercent: -12, scale: 1.06, ease: "none" },
+                  i - 1,
+                );
+              }
+            });
+          }
         }
 
         /* ------------------------------------------------- band parallax */

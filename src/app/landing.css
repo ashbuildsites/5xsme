@@ -2239,6 +2239,35 @@ body.lp-hot .lp-cur-ring {
     display: none;
   }
 
+  /* The stack gallery pin is disabled below 901px (see Motion.tsx) — on
+     mobile it becomes a swipeable carousel instead of a pinned scroll-jack,
+     so every photo is reachable by a normal swipe instead of relying on a
+     scroll-linked animation that was leaving cards 2-4 stuck off-screen. */
+  .lp-stack-pin {
+    height: auto;
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 0 22px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .lp-stack-pin::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lp-stk {
+    position: relative;
+    inset: auto;
+    flex: 0 0 82vw;
+    aspect-ratio: 4 / 5;
+    scroll-snap-align: center;
+    transform: none !important;
+  }
+
   .lp-stats {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2302,10 +2331,6 @@ body.lp-hot .lp-cur-ring {
 
   .lp-band-b.is-outline {
     -webkit-text-stroke: 1px rgba(18, 18, 18, 0.3);
-  }
-
-  .lp-stk {
-    inset: 9vh 22px;
   }
 
   .lp-stk-cap {
