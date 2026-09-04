@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { services, getServiceBySlug } from "@/lib/services-data";
-import { ServiceTemplate } from "@/components/sections/ServiceTemplate";
+import { ServiceDetail } from "@/components/landing/ServiceDetail";
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -30,5 +30,5 @@ export default async function ServicePage({
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) notFound();
-  return <ServiceTemplate service={service} />;
+  return <ServiceDetail service={service} />;
 }

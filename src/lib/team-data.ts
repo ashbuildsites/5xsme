@@ -74,5 +74,6 @@ export const team: TeamMember[] = [
       "Handles lighting, audio, and on-site production setup",
       "Works with the social team to match footage to the content calendar",
     ],
+    photo: "/images/teams/arjun-g-kanchan.webp",
   },
 ];

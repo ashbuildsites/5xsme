@@ -1,54 +1,147 @@
-import { Metadata } from "next";
-import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
-import { QuoteForm } from "@/components/sections/QuoteForm";
+import type { Metadata } from "next";
+import Image from "next/image";
+
+import { Shell, PageHeader } from "@/components/landing/Shell";
+import { ContactForm } from "@/components/landing/ContactForm";
 import { siteConfig } from "@/lib/site-config";
+import { faqs } from "@/lib/landing-data";
+import { process } from "@/lib/agency-data";
 
 export const metadata: Metadata = {
-  title: "Get a Quote",
+  title: "Contact",
   description:
-    "Tell us about your business and what you need — 5xSME will get back to you within one business day with a plan and a quote.",
+    "Talk to 5xSME — a Bengaluru marketing and technology team for small and medium businesses. One discovery call, a real plan, an itemised quote, no lock-in.",
   alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
-    <section className="py-16 sm:py-20">
-      <Container className="grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1.1fr]">
-        <div>
-          <Eyebrow>Get in touch</Eyebrow>
-          <h1 className="text-balance font-display text-[36px] font-extrabold leading-[1.1] sm:text-[46px]">
-            Let&apos;s Talk About Your Business.
-          </h1>
-          <p className="mt-6 max-w-[46ch] text-[16px] leading-relaxed text-muted">
-            Fill in the form and we&apos;ll get back to you within one business day
-            — or reach us directly below.
-          </p>
+    <Shell>
+      <PageHeader
+        kicker="Start Here"
+        title={
+          <>
+            TELL US WHAT&apos;S
+            <br />
+            <em>NOT WORKING.</em>
+          </>
+        }
+        intro="One discovery call, an honest read on what's worth doing, and an itemised quote before you commit to anything. We reply within one working day."
+      />
 
-          <div className="mt-10 flex flex-col gap-4 border-t border-line pt-8">
-            <a href={`tel:${siteConfig.phoneE164}`} className="flex items-center justify-between border-b border-line pb-4 text-[15px] font-semibold">
-              Call
-              <span className="font-mono text-[14px] font-normal text-muted">{siteConfig.phoneDisplay}</span>
-            </a>
-            <a href={siteConfig.whatsappUrl} className="flex items-center justify-between border-b border-line pb-4 text-[15px] font-semibold">
-              WhatsApp
-              <span className="font-mono text-[14px] font-normal text-muted">{siteConfig.phoneDisplay}</span>
-            </a>
-            <a href={`mailto:${siteConfig.email}`} className="flex items-center justify-between pb-4 text-[15px] font-semibold">
-              Email
-              <span className="font-mono text-[14px] font-normal text-muted">{siteConfig.email}</span>
-            </a>
+      <section className="lp-contact" style={{ paddingTop: "9vh" }}>
+        <div className="lp-contact-grid" style={{ marginTop: 0 }}>
+          <div className="lp-contact-info">
+            <div className="lp-contact-art">
+              <Image
+                src="/images/landing/contact-art.webp"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+
+            <div className="lp-contact-top">
+              <span className="lp-contact-k">Discovery Call</span>
+              <h2 className="lp-c-h">
+                ONE CALL.
+                <br />
+                <em>A REAL PLAN.</em>
+              </h2>
+            </div>
+
+            <div className="lp-contact-details">
+              <a className="lp-c-row" href={`tel:${siteConfig.phoneE164}`}>
+                <span className="lp-c-ico" aria-hidden>
+                  ☏
+                </span>
+                <span className="lp-c-val">
+                  <strong>Phone</strong>
+                  <span>{siteConfig.phoneDisplay}</span>
+                </span>
+              </a>
+              <a className="lp-c-row" href={`mailto:${siteConfig.email}`}>
+                <span className="lp-c-ico" aria-hidden>
+                  ✉
+                </span>
+                <span className="lp-c-val">
+                  <strong>Email</strong>
+                  <span>{siteConfig.email}</span>
+                </span>
+              </a>
+              <a
+                className="lp-c-row"
+                href={siteConfig.whatsappUrl}
+                target="_blank"
+                rel="noopener"
+              >
+                <span className="lp-c-ico" aria-hidden>
+                  ◆
+                </span>
+                <span className="lp-c-val">
+                  <strong>WhatsApp</strong>
+                  <span>Message us directly</span>
+                </span>
+              </a>
+              <div className="lp-c-row">
+                <span className="lp-c-ico" aria-hidden>
+                  ⌘
+                </span>
+                <span className="lp-c-val">
+                  <strong>Studio</strong>
+                  <span>
+                    Bengaluru, {siteConfig.region} · {siteConfig.legalNote}
+                  </span>
+                </span>
+              </div>
+            </div>
           </div>
 
-          <p className="mt-6 font-mono text-[12px] uppercase tracking-[0.06em] text-muted">
-            {siteConfig.cities.join(" · ")}, {siteConfig.region} · {siteConfig.legalNote}
-          </p>
+          <ContactForm />
         </div>
+      </section>
 
-        <div className="rounded-2xl border-2 border-ink bg-paper-2 p-6 sm:p-8">
-          <QuoteForm />
+      {/* --------------------------------------------- what happens next */}
+      <section className="lp-sec">
+        <div className="lp-sec-lbl">What Happens Next</div>
+        <h2 className="lp-sec-h">
+          FROM ENQUIRY
+          <br />
+          TO LIVE CAMPAIGN.
+        </h2>
+        <div className="lp-grid">
+          {process.map((p) => (
+            <div className="lp-cell" key={p.n}>
+              <span className="lp-cell-n">{p.n}</span>
+              <h3>{p.title}</h3>
+              <p>{p.body}</p>
+            </div>
+          ))}
         </div>
-      </Container>
-    </section>
+      </section>
+
+      {/* ------------------------------------------------------------ faq */}
+      <section className="lp-faq">
+        <div className="lp-faq-grid">
+          <div>
+            <div className="lp-sec-lbl">Before You Ask</div>
+            <h2 className="lp-sec-h">
+              WHAT OWNERS
+              <br />
+              ASK FIRST
+            </h2>
+          </div>
+          <div className="lp-faq-list">
+            {faqs.map((f, i) => (
+              <details className="lp-faq-item" key={f.q} open={i === 0}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    </Shell>
   );
 }
